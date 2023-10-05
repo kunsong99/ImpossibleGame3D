@@ -21,13 +21,14 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(0,0,speed);
+        transform.Translate(0,0,speed,Space.World);
         //these two ways both work
         //if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         if(Input.GetButtonDown("Jump") && IsTouchingGround())
         {
             Rigidbody rigidBody = gameObject.GetComponent<Rigidbody>();
             rigidBody.AddForce(0,defaultJumpForceY,0);
+            rigidBody.angularVelocity = new Vector3(2,0,speed);
         }
     }
 
