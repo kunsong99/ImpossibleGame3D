@@ -24,10 +24,18 @@ public class PlayerController : MonoBehaviour
         transform.Translate(0,0,speed);
         //these two ways both work
         //if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
-        if(Input.GetButtonDown("Jump"))
+        if(Input.GetButtonDown("Jump") && IsTouchingGround())
         {
             Rigidbody rigidBody = gameObject.GetComponent<Rigidbody>();
             rigidBody.AddForce(0,defaultJumpForceY,0);
         }
     }
+
+    bool IsTouchingGround()
+    {
+        int layerMask = LayerMask.GetMask("Ground");
+        //the reason divided by 1.99 not 2
+        return Physics.CheckBox(transform.position, transform.localScale / 1.99f, transform.rotation, layerMask);
+    }
+    
 }
