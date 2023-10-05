@@ -319,6 +319,22 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 185918771}
+          m_TargetAssemblyTypeName: StartGameButton, Assembly-CSharp
+          m_MethodName: Click
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &437102863
 GameObject:
   m_ObjectHideFlags: 0
@@ -5606,6 +5622,6 @@ SceneRoots:
   - {fileID: 1787395372}
   - {fileID: 2032704891}
   - {fileID: 185918770}
+  - {fileID: 2131381098}
   - {fileID: 1801371890}
   - {fileID: 437102866}
-  - {fileID: 2131381098}
